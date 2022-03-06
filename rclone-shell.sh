@@ -1,9 +1,9 @@
 #!/bin/bash
 
-bucket = $1;
-dir = $2;
-year =$3;
-location = $4;
+bucket=$1;
+dir=$2;
+year=$3;
+location=$4;
 rclone sync image-fr:$bucket/$dir/uploads/$year/01 $location/wp-content/uploads/$year/01 --ignore-existing --log-file=/root/transfer.log &
 rclone sync image-fr:$bucket/$dir/uploads/$year/02 $location/wp-content/uploads/$year/02 --ignore-existing --log-file=/root/transfer.log &
 rclone sync image-fr:$bucket/$dir/uploads/$year/03 $location/wp-content/uploads/$year/03 --ignore-existing --log-file=/root/transfer.log &
